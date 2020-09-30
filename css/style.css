@@ -15,3 +15,66 @@ p {
     color: aqua;
   }
 }
+
+.grid-1 {
+  width: cal(8.3333333333%-20px);
+}
+
+.grid-2 {
+  width: cal(16.6666666667%-20px);
+}
+
+.grid-3 {
+  width: cal(25%-20px);
+}
+
+.grid-4 {
+  width: cal(33.3333333333%-20px);
+}
+
+.grid-5 {
+  width: cal(41.6666666667%-20px);
+}
+
+.grid-6 {
+  width: cal(50%-20px);
+}
+
+.grid-7 {
+  width: cal(58.3333333333%-20px);
+}
+
+.grid-8 {
+  width: cal(66.6666666667%-20px);
+}
+
+.grid-9 {
+  width: cal(75%-20px);
+}
+
+.grid-10 {
+  width: cal(83.3333333333%-20px);
+}
+
+.grid-11 {
+  width: cal(91.6666666667%-20px);
+}
+
+.grid-12 {
+  width: cal(100%-20px);
+}
+
+[class^=grid-] {
+  float: left;
+  min-height: 1px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+@media screen and (max-width: 759px) {
+  [class^=grid-] {
+    width: 100%;
+    float: none;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
