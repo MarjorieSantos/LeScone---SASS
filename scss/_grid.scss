@@ -74,3 +74,48 @@ p {
 [class^="grid-"] {
   @include grid-structure;
 }
+
+//gera as casses de offset
+
+@for $i from 1 through $cols {
+  .offset-#{$i} {
+    margin-left: grid($i, offset);
+    @extend %offset;
+  }
+}
+
+@include d(s) {
+  %offset {
+    margin-left: 0px;
+  }
+}
+
+//mixin de clearfix
+@mixin clearfix {
+  &::after, &::before {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin container {
+  max-width: $l-device;
+  margin: 0px auto;
+  position: relative;
+  @include d(m) {
+    max-width: $m-device;
+  }
+
+  @include d(s) {
+    max-width: $s-device;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  @include clearfix;
+}
+
+.container {
+  @include container;
+}
